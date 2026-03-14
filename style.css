@@ -1,0 +1,251 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+/* khung tổng */
+header {
+    background-color: #f2994a;  /* màu cam chủ đạo */
+    color: white;
+}
+
+/* hàng trên: title - search */
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.titlePage{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    width: 150px;
+    padding-right: 50px;
+    display: flex;
+}
+.User{
+    padding-left: 1000px;
+}
+
+main {
+    flex: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
+}
+/* ô search */
+.searchBar{
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* thanh category */
+.category-item {
+    background-color: #0b76d1;
+    border-radius: 4px;
+    padding: 8px 0;
+}
+.category-item ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.category-item li {
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+.category-item li:hover {
+    text-decoration: underline;
+}
+.course-detail table,
+main table {
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;                  /* để bo góc có tác dụng */
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    min-width: 520px;
+}
+
+.course-detail th, .course-detail td,
+main th, main td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.4;
+}
+
+.course-detail th, main th {
+    width: 160px;
+    background: #fafafa;
+    color: #333;
+    font-weight: 700;
+}
+
+/* Responsive cho màn nhỏ */
+@media (max-width: 768px) {
+    .top-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .searchBar input {
+        width: 100%;
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    width: 260px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: 0.25s;
+    text-align: center;
+}
+.card:hover {
+    transform: scale(1.03);
+}
+img {
+    width: 100%;
+    border-radius: 10px;
+    height: 160px;
+    object-fit: cover;
+}
+.title {
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 10px;
+}
+.desc {
+    font-size: 14px;
+    color: #555;
+    margin: 8px 0;
+    min-height: 45px;
+}
+.price {
+    color: #d32f2f;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.btn:hover {
+    background: #0056b3;
+}
+
+footer {
+    margin-top: auto;      /* chìa khóa thứ 2 */
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 14px 10px;
+}
+
+
+.push-right {
+    margin-left: auto;
+}
+
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* --- CSS cho trang UserDetail.jsp --- */
+
+.profile-form {
+    width: 100%;
+    max-width: 500px; /* Đặt chiều rộng tối đa cho form */
+    margin: 25px auto;
+    padding: 25px;
+    background: #ffffff; /* Nền trắng */
+    border: 1px solid #e0e0e0; /* Viền xám nhạt */
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Đổ bóng mềm */
+}
+
+/* Định dạng cho mỗi trường (input + label) */
+.profile-form .field {
+    margin-bottom: 15px;
+}
+
+.profile-form .field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Định dạng chung cho các ô input */
+.profile-form .field input[type="text"],
+.profile-form .field input[type="password"],
+.profile-form .field input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Quan trọng để padding không làm vỡ layout */
+}
+
+/* Định dạng cho khu vực nút bấm */
+.profile-form .form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Nút bấm (có thể tái sử dụng ở nhiều nơi) */
+.btn-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #0b76d1; /* Màu xanh dương */
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #085a9f;
+}
